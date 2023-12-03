@@ -1,0 +1,12 @@
+.sidebar_nav {
+    float: left;
+    border-color: aqua;
+    width: 200px;
+    position: absolute;
+    left: auto;
+}
+
+.nav_btns {
+    background-color: white;
+    padding-top: 20%;
+}
