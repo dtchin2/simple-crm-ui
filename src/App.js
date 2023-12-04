@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <h1>Simple CRM System</h1>
-      <Dashboard/>
+      <Dashboard />
     </div>
   );
 }

@@ -1,0 +1,21 @@
+.nav_panel {
+    background-color: black;
+}
+
+ul {
+    list-style-type: none;
+    position: absolute;
+}
+
+.menu_btn {
+    width: 25em;
+    height: 3em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    background-color: aqua;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
