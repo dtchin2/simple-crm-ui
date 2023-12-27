@@ -6,6 +6,9 @@ import CustomerTable from "../CustomerTable/CustomerTable";
 function CustomerPanel() {
     return (
         <Container>
+            <br/>
+            <h2>Customers Panel</h2>
+            <br/>
             <CustomerTable />
         </Container>
     )
