@@ -9,8 +9,7 @@ function CustomerTable() {
   const [searchByPhone, setsearchByPhone] = useState(false);
   const [searchByEmail, setsearchByEmail] = useState(false);
   const [searchInputVal, setSearchInputVal] = useState('')
-  const url = "http://localhost:8080/api/customer";
-  const emailUrl = "http://localhost:8080/api/customer/email";
+  const url = 'http://localhost:8080/api/customer';
 
   function showSearchByEmailInput() {
     setsearchByEmail(true);
@@ -26,25 +25,20 @@ function CustomerTable() {
     if(searchInputVal.toString().length === 0){
         alert("Search Field Cannot Be Empty");
     }else {
-        const params = {
-            email: searchInputVal,
-        };
         try {
-            axios.get(emailUrl, {params})
-            .then((response) => setCustomers(response.data))
-
-            console.log(customers)
+            fetch(url, {email: searchInputVal})
+            .then(response => response.json())
+            .then(res => console.log("Data: " + res))
         }catch(error){
-            console.log("Error Getting Customer", error)
+            console.log(error.message)
         }
     }
   }
 
   useEffect(() => {
     try {
-      axios.get(url).then((response) => {
-        setCustomers(response.data);
-      });
+      fetch(url).then(response => response.json())
+      .then(data => setCustomers(data));
     } catch (error) {
       console.log(error.message);
     } finally {

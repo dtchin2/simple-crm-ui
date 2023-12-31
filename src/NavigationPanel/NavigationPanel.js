@@ -4,6 +4,7 @@ import { Button, ButtonGroup, Nav } from "react-bootstrap";
 import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import HomePanel from "../HomePanel/HomePanel";
 import CustomerPanel from "../CustomerPanel/CustomerPanel";
+import EmployeePanel from "../EmployeePanel/EmployeePanel";
 
 function NavigationPanel() {
     return (
@@ -58,6 +59,7 @@ function NavigationPanel() {
             <Routes>
                 <Route path="/" element={<HomePanel />}></Route>
                 <Route path="/customers" element={<CustomerPanel />}></Route>
+                <Route path="/employees" element={<EmployeePanel />}></Route>
             </Routes>
         </Router>
     )
