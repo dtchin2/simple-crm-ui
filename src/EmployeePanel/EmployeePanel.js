@@ -1,9 +1,14 @@
 import React, { useState } from "react";
+import EmployeeTable from "../EmployeeTable/EmployeeTable";
 
 function EmployeePanel(){
+
     return (
         <div>
-            <h1>Employee Panel</h1>
+            <br/>
+            <h3>Employee Panel</h3>
+            <br/>
+            <EmployeeTable />
         </div>
     )
 }
